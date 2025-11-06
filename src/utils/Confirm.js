@@ -1,0 +1,15 @@
+import { ElMessageBox } from "element-plus";
+
+const Confirm = (msg, okfun) => {
+    ElMessageBox.confirm(msg, "提示", {
+        "confirm-button-text": "确定",
+        "cancel-button-text": "取消",
+        "type": "info"
+    }).then(async () => {
+        okfun()
+    }).catch(() => {
+        
+    })
+}
+
+export default Confirm
