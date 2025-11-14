@@ -1,0 +1,101 @@
+2025-10-29 14:45:12 [INFO][com.easybbs.EasybbsWebApplication][logStarting][55]-> Starting EasybbsWebApplication v1.0 using Java 1.8.0_351 on LAPTOP-7Q7LK22D with PID 31180 (D:\easyBBS\easybbs\easybbs-web-release-1.0.jar started by Lenovo in D:\easyBBS\easybbs)
+2025-10-29 14:45:12 [INFO][com.easybbs.EasybbsWebApplication][logStartupProfileInfo][635]-> No active profile set, falling back to default profiles: default
+2025-10-29 14:45:13 [INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][initialize][108]-> Tomcat initialized with port(s): 7070 (http)
+2025-10-29 14:45:13 [INFO][org.apache.coyote.http11.Http11NioProtocol][log][173]-> Initializing ProtocolHandler ["http-nio-7070"]
+2025-10-29 14:45:13 [INFO][org.apache.catalina.core.StandardService][log][173]-> Starting service [Tomcat]
+2025-10-29 14:45:13 [INFO][org.apache.catalina.core.StandardEngine][log][173]-> Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-10-29 14:45:13 [INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/api]][log][173]-> Initializing Spring embedded WebApplicationContext
+2025-10-29 14:45:13 [INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][prepareWebApplicationContext][290]-> Root WebApplicationContext: initialization completed in 1535 ms
+2025-10-29 14:45:14 [INFO][org.apache.coyote.http11.Http11NioProtocol][log][173]-> Starting ProtocolHandler ["http-nio-7070"]
+2025-10-29 14:45:14 [INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][start][220]-> Tomcat started on port(s): 7070 (http) with context path '/api'
+2025-10-29 14:45:14 [INFO][com.easybbs.EasybbsWebApplication][logStarted][61]-> Started EasybbsWebApplication in 3.006 seconds (JVM running for 3.559)
+2025-10-29 14:45:14 [INFO][com.zaxxer.hikari.HikariDataSource][getConnection][110]-> HikariCPDatasource - Starting...
+2025-10-29 14:45:15 [INFO][com.zaxxer.hikari.HikariDataSource][getConnection][123]-> HikariCPDatasource - Start completed.
+2025-10-29 14:45:15 [INFO][com.easybbs.a][run][48]-> 服务启动成功，开始愉快的开发吧
+2025-10-29 14:45:22 [INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/api]][log][173]-> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-29 14:45:22 [INFO][org.springframework.web.servlet.DispatcherServlet][initServletBean][525]-> Initializing Servlet 'dispatcherServlet'
+2025-10-29 14:45:22 [INFO][org.springframework.web.servlet.DispatcherServlet][initServletBean][547]-> Completed initialization in 1 ms
+2025-10-29 15:01:14 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 登录超时，请重新登录
+2025-10-29 15:01:14 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/forum/doLike,错误信息:
+com.easybbs.c.a: 登录超时，请重新登录
+2025-10-29 15:05:19 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 账号或者密码错误
+2025-10-29 15:05:19 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 账号或者密码错误
+2025-10-29 15:06:12 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 账号或者密码错误
+2025-10-29 15:06:12 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 账号或者密码错误
+2025-10-29 16:50:45 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:50:45 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:50:46 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:50:46 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:51:53 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:51:53 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:52:04 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:52:04 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:54:57 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:54:57 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:56:43 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:56:43 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:57:43 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 16:57:43 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:08:06 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:08:06 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:08:23 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:08:23 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:10:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:10:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:19:32 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:19:32 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:22:38 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:22:38 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:29:35 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:29:35 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:29:36 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:29:36 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:35:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 17:35:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:25 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:25 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:48 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-10-29 18:10:48 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误

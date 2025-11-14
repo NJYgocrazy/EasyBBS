@@ -1,0 +1,201 @@
+2025-11-06 09:20:02 [INFO][com.easybbs.EasybbsWebApplication][logStarting][55]-> Starting EasybbsWebApplication v1.0 using Java 1.8.0_351 on LAPTOP-7Q7LK22D with PID 261908 (D:\easyBBS\easybbs\easybbs-web-release-1.0.jar started by Lenovo in D:\easyBBS\easybbs)
+2025-11-06 09:20:02 [INFO][com.easybbs.EasybbsWebApplication][logStartupProfileInfo][635]-> No active profile set, falling back to default profiles: default
+2025-11-06 09:20:04 [INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][initialize][108]-> Tomcat initialized with port(s): 7070 (http)
+2025-11-06 09:20:04 [INFO][org.apache.coyote.http11.Http11NioProtocol][log][173]-> Initializing ProtocolHandler ["http-nio-7070"]
+2025-11-06 09:20:04 [INFO][org.apache.catalina.core.StandardService][log][173]-> Starting service [Tomcat]
+2025-11-06 09:20:04 [INFO][org.apache.catalina.core.StandardEngine][log][173]-> Starting Servlet engine: [Apache Tomcat/9.0.55]
+2025-11-06 09:20:04 [INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/api]][log][173]-> Initializing Spring embedded WebApplicationContext
+2025-11-06 09:20:04 [INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext][prepareWebApplicationContext][290]-> Root WebApplicationContext: initialization completed in 1437 ms
+2025-11-06 09:20:05 [INFO][org.apache.coyote.http11.Http11NioProtocol][log][173]-> Starting ProtocolHandler ["http-nio-7070"]
+2025-11-06 09:20:05 [INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer][start][220]-> Tomcat started on port(s): 7070 (http) with context path '/api'
+2025-11-06 09:20:05 [INFO][com.easybbs.EasybbsWebApplication][logStarted][61]-> Started EasybbsWebApplication in 2.726 seconds (JVM running for 3.043)
+2025-11-06 09:20:05 [INFO][com.zaxxer.hikari.HikariDataSource][getConnection][110]-> HikariCPDatasource - Starting...
+2025-11-06 09:20:06 [INFO][com.zaxxer.hikari.HikariDataSource][getConnection][123]-> HikariCPDatasource - Start completed.
+2025-11-06 09:20:06 [INFO][com.easybbs.a][run][48]-> 服务启动成功，开始愉快的开发吧
+2025-11-06 09:20:09 [INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/api]][log][173]-> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06 09:20:09 [INFO][org.springframework.web.servlet.DispatcherServlet][initServletBean][525]-> Initializing Servlet 'dispatcherServlet'
+2025-11-06 09:20:09 [INFO][org.springframework.web.servlet.DispatcherServlet][initServletBean][547]-> Completed initialization in 0 ms
+2025-11-06 09:35:53 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-11-06 09:35:53 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-11-06 10:43:53 [WARN][org.springframework.web.servlet.PageNotFound][noHandlerFound][1278]-> No mapping for POST /api/api/file/uploadImage
+2025-11-06 10:43:53 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/api/file/uploadImage,错误信息:
+org.springframework.web.servlet.NoHandlerFoundException: No handler found for POST /api/api/file/uploadImage
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1282)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1045)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2025-11-06 10:48:16 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-11-06 10:48:16 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-11-06 10:48:35 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 请求参数错误
+2025-11-06 10:48:35 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 请求参数错误
+2025-11-06 11:11:37 [ERROR][com.easybbs.f.c][a][104]-> 文件上传失败
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(Unknown Source)
+	at com.easybbs.f.j.G(StringTools.java:27)
+	at com.easybbs.f.c.a(FileUtils.java:31)
+	at com.easybbs.d.a.f.a(ForumCommentServiceImpl.java:187)
+	at com.easybbs.d.a.f$$FastClassBySpringCGLIB$$d39344a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.easybbs.d.a.f$$EnhancerBySpringCGLIB$$b710b219.a(<generated>)
+	at com.easybbs.b.e.postComment(ForumCommentController.java:99)
+	at com.easybbs.b.e$$FastClassBySpringCGLIB$$8ebcfe6f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.easybbs.a.a.interceptorDo(OperationAspect.java:103)
+	at sun.reflect.GeneratedMethodAccessor216.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.easybbs.b.e$$EnhancerBySpringCGLIB$$5686ac5f.postComment(<generated>)
+	at sun.reflect.GeneratedMethodAccessor488.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2025-11-06 11:11:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 文件上传失败
+2025-11-06 11:11:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/comment/postComment,错误信息:
+com.easybbs.c.a: 文件上传失败
+2025-11-06 11:44:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:44:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/resetPwd,错误信息:
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:44:53 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:44:53 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:46:55 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:46:55 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:49:37 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:49:37 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:49:47 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:49:47 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:51:44 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:51:44 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 账号或者密码错误
+2025-11-06 11:58:04 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 11:58:04 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/login,错误信息:
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 12:03:19 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 12:03:19 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/resetPwd,错误信息:
+com.easybbs.c.a: 图片验证码不正确
+2025-11-06 12:06:27 [ERROR][com.easybbs.a.a][interceptorDo][116]-> 全局拦截器异常
+com.easybbs.c.a: 登录超时，请重新登录
+2025-11-06 12:06:27 [ERROR][com.easybbs.b.b.b][a][24]-> 请求错误，请求地址http://localhost:7070/api/forum/doLike,错误信息:
+com.easybbs.c.a: 登录超时，请重新登录
