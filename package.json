@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:full": "node ai-server/dev-full.mjs",
+    "ai:server": "node ai-server/server.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write src/"

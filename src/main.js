@@ -31,7 +31,6 @@ import Request from './utils/Request'
 import Utils from './utils/Utils'
 import Confirm from './utils/Confirm'
 
-
 const app = createApp(App)
 const pinia = createPinia()
 

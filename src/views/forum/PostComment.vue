@@ -30,6 +30,11 @@
               <span class="iconfont icon-image"></span>
             </el-upload>
           </div>
+          <AiCommentAssistant
+            :content="formData.content"
+            :articleId="articleId"
+            @update="applyAiComment"
+          ></AiCommentAssistant>
         </el-form-item>
       </el-form>
     </div>
@@ -39,6 +44,7 @@
 
 <script setup>
 import CommentImage from './CommentImage.vue'
+import AiCommentAssistant from '@/components/AiCommentAssistant.vue'
 import { ref, reactive, getCurrentInstance, onMounted } from 'vue'
 import { ElMessage } from 'element-plus'
 import { useRouter, useRoute } from 'vue-router'
@@ -107,9 +113,6 @@ const postCommentDo =  () => {
     params.pCommentId = props.pCommentId
     params.replyUserId = props.replyUserId
 
-    console.log("我是")
-    console.log(params)
-
     let res = await proxy.Request({
       url: api.postComment,
       params,
@@ -117,7 +120,6 @@ const postCommentDo =  () => {
 
     if (!res) return
 
-    console.log(res)
     proxy.Message.success('评论成功')
     formDataRef.value.resetFields()
     removeCommentImg()
@@ -141,6 +143,10 @@ const removeCommentImg = () => {
   commentImg.value = null
   formData.value.image = null
 }
+
+const applyAiComment = (content) => {
+  formData.value.content = content
+}
 </script>
 
 <style lang="scss" scoped>
@@ -152,6 +158,9 @@ const removeCommentImg = () => {
     margin: 0px 10px;
     .el-textarea__inner {
       height: 60px;
+    }
+    :deep(.el-form-item__content) {
+      align-items: flex-start;
     }
     .insert-img {
       line-height: normal;

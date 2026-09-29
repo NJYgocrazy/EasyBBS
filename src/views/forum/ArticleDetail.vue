@@ -84,6 +84,7 @@
     <!-- 目录 -->
     <div class="top-panel">
       <div class="top-container">
+        <AiArticleInsight :articleInfo="articleInfo"></AiArticleInsight>
         <div class="top-title">目录</div>
         <div class="toc-list">
           <template v-if="tocArray.length == 0">
@@ -144,6 +145,7 @@ import { ref, watch, getCurrentInstance, onMounted, nextTick, onUnmounted } from
 import { ElMessage } from 'element-plus'
 import { useRouter, useRoute } from 'vue-router'
 import Avatar from '@/components/Avatar.vue'
+import AiArticleInsight from '@/components/AiArticleInsight.vue'
 import { useAllDataStore } from '@/store'
 
 import CommentList from './CommentList.vue'
@@ -521,13 +523,14 @@ watch(() => store.sysSetting, (newVal, oldVal) => {
   .top-container {
     width: 285px;
     position: fixed;
-    // height: 500px;
-    background: white;
-    .toc-title {
+    .top-title {
+      background: #fff;
       border-bottom: 1px solid #ddd;
       padding: 10px;
+      font-weight: 600;
     }
     .toc-list {
+      background: #fff;
       max-height: calc(100vh - 200px);
       overflow: auto;
       padding: 5px;

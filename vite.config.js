@@ -19,6 +19,10 @@ export default defineConfig({
     hmr: true,
     port: 3004,
     proxy: {
+      '/api/ai': {
+        target: 'http://localhost:7072',
+        changeOrigin: true,
+      },
       '/api': {
         target: 'http://localhost:7070',
         changeOrigin: true,
