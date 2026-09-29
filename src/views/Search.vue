@@ -3,7 +3,7 @@
     <div class="search-panel" :style="{ 'padding-top': startSearch ? '0px' : searchHeight + 'px' }">
       <el-form :model="formData" :rules="rules" ref="formDataRef" @submit.prevent>
         <!--input输入-->
-        <el-form-item prop="">
+        <el-form-item prop="keyword">
           <el-input
             size="large"
             clearable
@@ -23,6 +23,25 @@
           </el-input>
         </el-form-item>
       </el-form>
+      <div class="ai-search-panel" v-if="startSearch">
+        <div class="ai-search-actions">
+          <el-button size="small" type="primary" plain :loading="aiSearching" @click="loadAiSearch">
+            AI 理解搜索意图
+          </el-button>
+          <span v-if="aiIntent">{{ aiIntent }}</span>
+        </div>
+        <div class="ai-keywords" v-if="aiKeywords.length">
+          <el-tag
+            v-for="item in aiKeywords"
+            :key="item"
+            size="small"
+            effect="plain"
+            @click="useAiKeyword(item)"
+          >
+            {{ item }}
+          </el-tag>
+        </div>
+      </div>
     </div>
 
     <div class="ariticle-list">
@@ -51,6 +70,7 @@ import { ref, watch, getCurrentInstance, onMounted } from 'vue'
 import { ElMessage } from 'element-plus'
 import { useRouter, useRoute } from 'vue-router'
 import message from '@/utils/Message'
+import AiService from '@/utils/AiService'
 const { proxy } = getCurrentInstance()
 const router = useRouter()
 const route = useRoute()
@@ -72,12 +92,28 @@ const api = {
 const searchHeight = (window.innerHeight - 60 - 140 - 60) / 2
 
 const loading = ref(false)
+const aiSearching = ref(false)
+const aiIntent = ref('')
+const aiKeywords = ref([])
 
 const articleListInfo = ref({})
 const search = async () => {
+  const keyword = (formData.value.keyword || '').trim()
+  formData.value.keyword = keyword
+
+  if (!keyword) {
+    proxy.Message.warning('请输入关键词')
+    return
+  }
+
+  if (keyword.length < 3) {
+    proxy.Message.warning('关键词太短，至少三个字符')
+    return
+  }
+
   loading.value = true
   let params = {
-    keyword: formData.value.keyword,
+    keyword,
   }
 
   let res = await proxy.Request({
@@ -119,7 +155,29 @@ watch(
 )
 
 const changeInput = () => {
+  aiIntent.value = ''
+  aiKeywords.value = []
   if (formData.value.keyword == '') articleListInfo.value = {}
+}
+
+const loadAiSearch = async () => {
+  if (!formData.value.keyword) {
+    proxy.Message.warning('请先输入关键词')
+    return
+  }
+
+  aiSearching.value = true
+  const result = await AiService.searchAssist({
+    keyword: formData.value.keyword,
+  })
+  aiIntent.value = result.intent || ''
+  aiKeywords.value = result.keywords || []
+  aiSearching.value = false
+}
+
+const useAiKeyword = (keyword) => {
+  formData.value.keyword = keyword
+  search()
 }
 </script>
 
@@ -130,9 +188,35 @@ const changeInput = () => {
   min-height: calc(100vh - 210px);
   .search-panel {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     .el-input {
       width: 700px;
+    }
+    .ai-search-panel {
+      width: 700px;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #dbeafe;
+      border-radius: 6px;
+      background: #f8fbff;
+      .ai-search-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #4b5563;
+        font-size: 13px;
+      }
+      .ai-keywords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+        .el-tag {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

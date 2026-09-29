@@ -43,6 +43,11 @@
           <template #header>
             <span>设置</span>
           </template>
+          <AiPostAssistant
+            :formData="formData"
+            :editorType="editorType"
+            @apply="applyAiPatch"
+          ></AiPostAssistant>
           <div class="setting-inner">
             <!--input输入-->
             <el-form-item label="标题" prop="title">
@@ -96,11 +101,11 @@
 </template>
 
 <script setup>
-import { ref, reactive, getCurrentInstance, onMounted, watch, nextTick } from 'vue'
+import { ref, getCurrentInstance,  watch, nextTick } from 'vue'
 import { ElMessageBox } from 'element-plus'
 import { useRouter, useRoute } from 'vue-router'
 import CoverUpload from '@/components/CoverUpload.vue'
-import message from '@/utils/Message'
+import AiPostAssistant from '@/components/AiPostAssistant.vue'
 const { proxy } = getCurrentInstance()
 const router = useRouter()
 const route = useRoute()
@@ -113,6 +118,25 @@ const api = {
 }
 
 const articleId = ref(null)
+
+const formData = ref({})
+const formDataRef = ref()
+const rules = {
+  title: [
+    { required: true, message: '请输入标题' },
+    { max: 150, message: '标题太长' },
+    ],
+    boardIds: [{ required: true, message: '请选择板块' },],
+    content: [{ required: true, message: '请输入正文' },],
+    summary: [{ max: 200, message: '摘要太长' },],
+    integral: [{ required: true, message: '请输入下载所需积分' },
+    {validator: proxy.Vertify.number,message:"积分只能是数字"}],
+}
+
+const markdownHeight = window.innerHeight - 150
+
+const htmlEditorHeight = window.innerHeight - 240
+
 
 //编辑时拿到文章具体信息
 const getArticleDetail = () => {
@@ -180,24 +204,6 @@ watch(
   },
   { immediate: true, deep: true },
 )
-
-const formData = ref({})
-const formDataRef = ref()
-const rules = {
-  title: [
-    { required: true, message: '请输入标题' },
-    { max: 150, message: '标题太长' },
-    ],
-    boardIds: [{ required: true, message: '请选择板块' },],
-    content: [{ required: true, message: '请输入正文' },],
-    summary: [{ max: 200, message: '摘要太长' },],
-    integral: [{ required: true, message: '请输入下载所需积分' },
-    {validator: proxy.Vertify.number,message:"积分只能是数字"}],
-}
-
-const markdownHeight = window.innerHeight - 150
-
-const htmlEditorHeight = window.innerHeight - 240
 
 const boardProps = {
   multiple: false,
@@ -286,6 +292,15 @@ const changeEditor = () => {
     proxy.VueCookies.set('editorType', editorType.value, -1)
   })
 }
+
+const applyAiPatch = (patch) => {
+  Object.keys(patch).forEach((key) => {
+    if (key === 'fromFallback') return
+    formData.value[key] = patch[key]
+  })
+}
+
+
 
 //设置markdown编辑器的富文本信息
 const setHtmlContent = (htmlContent) => {
